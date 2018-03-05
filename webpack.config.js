@@ -2,7 +2,7 @@
 * @Author: yajie
 * @Date:   2018-03-04 11:47:15
 * @Last Modified by:   yajie
-* @Last Modified time: 2018-03-04 16:00:22
+* @Last Modified time: 2018-03-05 08:37:08
 */
 var webpack           = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -43,6 +43,15 @@ var config = {
            { test: /\.css$/,  loader: ExtractTextPlugin.extract("style-loader","css-loader") },
            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,  loader: 'url-loader?limit=100&name=resource/[name].[ext]' }
         ]
+    },
+    resolve : {
+        alias : {
+            util                : __dirname + '/src/util',
+            page                : __dirname + '/src/page',
+            service             : __dirname + '/src/service',
+            image               : __dirname + '/src/image',
+            node_modules         : __dirname + '/node_modules',
+        }
     },
     plugins:[
     //独立通用模块到js/base.js
