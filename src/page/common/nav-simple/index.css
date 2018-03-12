@@ -2,7 +2,7 @@
 * @Author: yajie
 * @Date:   2018-03-05 22:19:18
 * @Last Modified by:   yajie
-* @Last Modified time: 2018-03-05 22:31:26
+* @Last Modified time: 2018-03-12 21:36:42
 */
 
 .nav-simple{
@@ -11,8 +11,10 @@
     border-bottom: 1px solid #ddd;
     background: #fff;
 }
+
 .nav-simple .logo{
     font-size: 26px;
     font-weight: bold;
     color: #c60023;
+    text-decoration: none;
 }

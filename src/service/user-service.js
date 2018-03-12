@@ -2,7 +2,7 @@
 * @Author: yajie
 * @Date:   2018-03-05 23:17:42
 * @Last Modified by:   yajie
-* @Last Modified time: 2018-03-05 23:40:57
+* @Last Modified time: 2018-03-07 16:38:47
 */
 'use strict';
 
@@ -11,7 +11,7 @@ var _user = {
     //检查登录状态
     checkLogin : function(resolve,reject){
         _mm.request({
-            url     : _mm.getServerUrl('/user/get-user-info.do'),
+            url     : _mm.getServerUrl('/user/get_user_info.do'),
             method  : 'POST',
             success : resolve,
             error   : reject

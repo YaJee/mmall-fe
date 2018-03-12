@@ -2,7 +2,7 @@
 * @Author: yajie
 * @Date:   2018-03-05 22:51:05
 * @Last Modified by:   yajie
-* @Last Modified time: 2018-03-05 23:36:26
+* @Last Modified time: 2018-03-07 16:44:34
 */
 'use strict';
 require('./index.css'); 
@@ -30,10 +30,9 @@ var nav = {
         //登出事件
         $('.js-logout').click(function(){
             _user.logout(function(res){
-                $('.user.not-login').hide().siblings('.user.login').show()
-                    .find('.username').text(res.username);
+                window.location.reload();
             },function(errMsg){
-                //do nothing
+                _mm.errorTips(errMsg);
             });
         })
 
@@ -41,9 +40,10 @@ var nav = {
     //加载用户信息
     loadUserInfo : function(){
             _user.checkLogin(function(res){
-                window.location.reload();
+                $('.user.not-login').hide().siblings('.user.login').show()
+                    .find('.username').text(res.username);
             },function(errMsg){
-                _mm.errorTips(errMsg);
+                   //do nothing
             });
     },
     loadCartCount :function(){
