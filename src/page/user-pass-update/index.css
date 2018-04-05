@@ -1,0 +1,31 @@
+/*
+* @Author: yajie
+* @Date:   2018-04-05 23:53:06
+* @Last Modified by:   yajie
+* @Last Modified time: 2018-04-06 00:08:18
+*/
+
+
+
+.form-line{
+
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+        margin-top: 10px;
+}
+.form-line .label{
+    display: line-block;
+    width:80px;
+    text-align: center;
+
+}
+
+.form-line .input{
+    height: 25px;
+    line-height: 25px;
+    width:200px;
+    font-size: 14px;
+
+
+}

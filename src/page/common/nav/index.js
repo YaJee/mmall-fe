@@ -2,7 +2,7 @@
 * @Author: yajie
 * @Date:   2018-03-05 22:51:05
 * @Last Modified by:   yajie
-* @Last Modified time: 2018-03-07 16:44:34
+* @Last Modified time: 2018-04-05 18:25:53
 */
 'use strict';
 require('./index.css'); 
@@ -25,7 +25,7 @@ var nav = {
         });
         //注册点击事件
         $('.js-register').click(function(){
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         //登出事件
         $('.js-logout').click(function(){
@@ -40,6 +40,7 @@ var nav = {
     //加载用户信息
     loadUserInfo : function(){
             _user.checkLogin(function(res){
+                console.log(res);
                 $('.user.not-login').hide().siblings('.user.login').show()
                     .find('.username').text(res.username);
             },function(errMsg){
