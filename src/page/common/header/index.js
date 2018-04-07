@@ -2,7 +2,7 @@
 * @Author: yajie
 * @Date:   2018-03-07 16:59:11
 * @Last Modified by:   yajie
-* @Last Modified time: 2018-03-07 17:49:46
+* @Last Modified time: 2018-04-06 18:14:44
 */
 'use strict';
 require('./index.css'); 
@@ -13,6 +13,7 @@ var header = {
 
     init : function () {
         this.bindEvent();
+        this.onLoad();
     },
     onLoad : function(){
         var keyword = _mm.getUrlParam('keyword');
